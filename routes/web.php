@@ -28,4 +28,9 @@ Route::middleware([
 
     // CRUD用
     Route::resource('events', EventController::class);
+
+    // カレンダー用
+    Route::get('/calendar', function () {
+        return view('full-calendar');
+    })->name('calendar');
 });
